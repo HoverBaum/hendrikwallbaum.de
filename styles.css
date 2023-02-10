@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('/fonts/NotoSans-Light.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Emoji';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    url('/fonts/noto-emoji-v24-emoji-regular.woff2') format('woff2'),
+    url('/fonts/noto-emoji-v24-emoji-regular.woff') format('woff');
+  font-display: swap;
+}
+
+:root {
+  --background-color: #fff;
+  --text-color: rgba(0, 0, 0, 0.87);
+  --headline-color: #334a5e;
+}
+
+html,
+body {
+  font-size: 18px;
+  color: var(--text-color);
+  font-family: 'Noto Sans', sans-serif;
+  line-height: 1.65;
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: var(--headline-color);
+  font-weight: 300;
+  margin-bottom: 0;
+  font-size: 3.052rem;
+  line-height: 1.15;
+  border-style: solid;
+  border-width: 0 0 2px 0;
+  margin-bottom: 0.33rem;
+  width: fit-content;
+  border-image: linear-gradient(
+      90deg,
+      rgba(255, 126, 0, 1) 0%,
+      rgba(255, 69, 0, 1) 100%
+    )
+    1;
+}
+
+hgroup {
+  margin-bottom: 3rem;
+}
+
+.subheadline {
+  opacity: 0.8;
+  color: var(--headline-color);
+}
+
+span.emoji {
+  font-family: 'Noto Emoji', sans-serif;
+}
+
+p {
+  max-width: 30rem;
+}
+
+a,
+a:visited {
+  color: var(--text-color);
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.side {
+  min-width: 50%;
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+
+.picture {
+  background-image: url('/hendrik-side.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.information {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 1rem;
+}
+
+@media (max-width: 50rem) {
+  .picture {
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #121212;
+    --text-color: #fefefe;
+    --headline-color: #fefefe;
+  }
+
+  .picture {
+    opacity: 0.75;
+  }
+
+  h1 {
+    border-image: linear-gradient(
+        90deg,
+        rgba(255, 126, 0, 0.66) 0%,
+        rgba(255, 69, 0, 0.66) 100%
+      )
+      1;
+  }
+}
