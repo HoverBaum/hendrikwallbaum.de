@@ -85,6 +85,8 @@ main {
 }
 
 .picture {
+  border: 2rem solid var(--background-color);
+  border-radius: 4rem;
   background-image: url('/hendrik-side.jpg');
   background-size: cover;
   background-position: center;
