@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "source": "index.html",
   "scripts": {
-    "dev": "npx http-server "
+    "dev": "npx live-server "
   },
   "repository": "https://github.com/HoverBaum/wallbaum.dev.git",
   "author": "Hendrik <mail@hendrikwallbaum.de>"
